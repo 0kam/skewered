@@ -11,8 +11,8 @@ Quantative comparison between two photos taken with fixed point camera requires 
 5. Map the source image to the destination image 
 
 ## Dependencies
-Python3
-opencv-python
+Python3  
+opencv-python  
 numpy
 
 ## Usage
