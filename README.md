@@ -31,11 +31,13 @@ im_diff = im2.astype(int) - im1_dh.astype(int)
 cv2.imwrite("diff.png", np.abs(im_diff))
 ```
 ### images
+source and destination images are taken from [NIES homepage](http://db.cger.nies.go.jp/gem/ja/mountain/station.html?id=2)
+
 source image
 ![](1009.jpeg)
 destination image
-![](1908.png)
+![](1908.jpeg)
 aligned source image
-![](result.png)
+![](result_1009.png)
 abs(aligned - destination)
 ![](diff.png)
