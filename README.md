@@ -1,7 +1,8 @@
 # Skewered
 OpenCV-based Image alignment tool for fixed point cameras
 ## Introduction
-Quantative comparison between two photos taken with a fixed point camera requires image to image alignment based on pixel to pixel matching. skewered.py uses lens distortion models and homography translations to minimize the distance between matching points of two images. For local feature matching, I use AKAZE descripter and FLANN matcher of OpenCV. I use a lens distortion model similar to the cv2.calibratecamera. The parameters k1, k2, k3, k4, k5, k6, p1, p2 are estimated.
+Quantative comparison between two photos taken with a fixed point camera requires image to image alignment based on pixel to pixel matching. Even with fixed point cameras, each photos are not exactly same, the direction may change a litle, the lenses and cameras might be changed.  
+skewered.py uses lens distortion models and homography translations to minimize the distance between matching points of two images and map one image to another. For local feature matching, I use AKAZE descripter and FLANN matcher of OpenCV. I use a lens distortion model similar to the cv2.calibratecamera. The parameters k1, k2, k3, k4, k5, k6, p1, p2 are estimated.
 
 ## Work flow
 1. AKAZE local feature detection
@@ -31,7 +32,8 @@ im_diff = im2.astype(int) - im1_dh.astype(int)
 cv2.imwrite("diff.png", np.abs(im_diff))
 ```
 ### images
-source and destination images are taken from [NIES homepage](http://db.cger.nies.go.jp/gem/ja/mountain/station.html?id=2)
+source and destination images are taken from [NIES homepage](http://db.cger.nies.go.jp/gem/ja/mountain/station.html?id=2)  
+source image and destination image were taken with same camera, but different lenses.
 
 source image
 ![](1009.jpeg)
