@@ -16,7 +16,7 @@ opencv-python
 numpy
 
 ## Usage
-
+### python code
 ```
 src = "1009.jpeg"
 dst = "1908.jpeg"
@@ -30,3 +30,12 @@ im2 = cv2.imread(dst)
 im_diff = im2.astype(int) - im1_dh.astype(int)
 cv2.imwrite("diff.png", np.abs(im_diff))
 ```
+### images
+source image
+![](1009.jpeg)
+destination image
+![](1908.png)
+aligned source image
+![](result.png)
+abs(aligned - destination)
+![](diff.png)
